@@ -3,7 +3,9 @@ import TextSentiment from "./components/TextSentiment";
 import SpeechToText from "./components/SpeechToText";
 import { Routes, Route } from "react-router-dom";
 import Results from "./components/Results";
-import Chatbot from "./components/Chatbot";
+// import Chatbot from "./components/Chatbot";
+import WebChat from "./components/WebChat";
+
 
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
         <Route path="/Text-sentiment" element={<TextSentiment />} />
         <Route path="/Speech-to-Text-sentiment" element={<SpeechToText />} />
         <Route path="/result" element={<Results />} />
-        <Route path="/chatbot" element={<Chatbot />} />
+        <Route path="/chatbot" element={<WebChat />} />
 
       </Routes>
     </>
