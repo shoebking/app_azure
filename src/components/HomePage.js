@@ -1,7 +1,7 @@
 import React from "react";
 import MainPage from "./MainPage";
 import Card from "./Card";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 import img2 from "./images/chatbotImage.png";
 
@@ -17,7 +17,13 @@ const HomePage = () => {
     width: "50px", // Adjust the width as needed
     height: "auto", // Maintain aspect ratio
   };
-  const navigate=useNavigate();
+  // const navigate=useNavigate();
+  const openChatbotInNewTab = () => {
+    const anchor = document.createElement("a");
+    anchor.href = "/chatbot";
+    anchor.target = "_blank";
+    anchor.click();
+  };
   // const openChatbotInNewTab = () => {
   //   // Open the chatbot route in a new tab
   //   window.open("/chatbot", "_blank");
@@ -40,7 +46,13 @@ const HomePage = () => {
           description="Upload the file here"
         />
         <div style={chatbotIconStyle}>
-          <img src={img2} alt="chatBot" style={imgStyle} onClick={()=>navigate('/chatbot')} />
+        <img
+            src={img2}
+            alt="chatBot"
+            style={imgStyle}
+            onClick={openChatbotInNewTab}
+          />
+          {/* <img src={img2} alt="chatBot" style={imgStyle} onClick={()=>navigate('/chatbot')} /> */}
         </div>
       </div>
     </MainPage>
