@@ -18,12 +18,12 @@ const HomePage = () => {
     height: "auto", // Maintain aspect ratio
   };
   // const navigate=useNavigate();
-  const openChatbotInNewTab = () => {
-    const anchor = document.createElement("a");
-    anchor.href = "/chatbot";
-    anchor.target = "_blank";
-    anchor.click();
-  };
+  // const openChatbotInNewTab = () => {
+  //   const anchor = document.createElement("a");
+  //   anchor.href = "/chatbot";
+  //   anchor.target = "_blank";
+  //   anchor.click();
+  // };
   // const openChatbotInNewTab = () => {
   //   // Open the chatbot route in a new tab
   //   window.open("/chatbot", "_blank");
@@ -46,13 +46,13 @@ const HomePage = () => {
           description="Upload the file here"
         />
         <div style={chatbotIconStyle}>
-        <img
+        {/* <img
             src={img2}
             alt="chatBot"
             style={imgStyle}
             onClick={openChatbotInNewTab}
-          />
-          {/* <img src={img2} alt="chatBot" style={imgStyle} onClick={()=>navigate('/chatbot')} /> */}
+          /> */}
+          <img src={img2} alt="chatBot" style={imgStyle} onClick={()=>navigate('/chatbot')} />
         </div>
       </div>
     </MainPage>
