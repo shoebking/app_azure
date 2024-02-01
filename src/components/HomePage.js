@@ -1,6 +1,7 @@
 import React from "react";
 import MainPage from "./MainPage";
 import Card from "./Card";
+import { useNavigate } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 import img2 from "./images/chatbotImage.png";
 
@@ -16,11 +17,11 @@ const HomePage = () => {
     width: "50px", // Adjust the width as needed
     height: "auto", // Maintain aspect ratio
   };
-
-  const openChatbotInNewTab = () => {
-    // Open the chatbot route in a new tab
-    window.open("/chatbot", "_blank");
-  };
+  const navigate=useNavigate();
+  // const openChatbotInNewTab = () => {
+  //   // Open the chatbot route in a new tab
+  //   window.open("/chatbot", "_blank");
+  // };
 
   return (
     <MainPage>
@@ -38,8 +39,8 @@ const HomePage = () => {
           name="Speech-to-Text"
           description="Upload the file here"
         />
-        <div style={chatbotIconStyle} onClick={openChatbotInNewTab}>
-          <img src={img2} alt="chatBot" style={imgStyle} />
+        <div style={chatbotIconStyle}>
+          <img src={img2} alt="chatBot" style={imgStyle} onClick={()=>navigate('/chatbot')} />
         </div>
       </div>
     </MainPage>
