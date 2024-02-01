@@ -2,7 +2,7 @@ import React from "react";
 import MainPage from "./MainPage";
 import Card from "./Card";
 // import { useNavigate } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import img2 from "./images/chatbotImage.png";
 
 const HomePage = () => {
@@ -17,7 +17,7 @@ const HomePage = () => {
     width: "50px", // Adjust the width as needed
     height: "auto", // Maintain aspect ratio
   };
-  // const navigate=useNavigate();
+  const navigate=useNavigate();
   // const openChatbotInNewTab = () => {
   //   const anchor = document.createElement("a");
   //   anchor.href = "/chatbot";
