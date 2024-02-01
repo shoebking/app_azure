@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .centered {
+    text-align: center;
+  }
+  
+  .white-text {
+    color: white;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+.start-button:hover,
+.start-button:active {
+  background: #ac0e77;
+  border-color: #ac0e77;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+}
+.stop-button:hover,
+.stop-button:active {
+  background: #ac0e77;
+  border-color: #ac0e77;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+}
+  
+  .start-button,
+  .stop-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4caf50; /* Green color for start button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .stop-button {
+    background-color: #f44336; /* Red color for stop button */
+  }
+  
+  .result-box {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+  }
+  
